@@ -1,0 +1,695 @@
+/* === MOBILE FIX (max-width: 320px) === */
+@media (max-width: 320px) {
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* All main sections */
+  .maincontent,
+  .content,
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px;
+    margin: 90px auto 20px auto; /* space below menu button */
+  }
+
+  /* Remove absolute positioning from content */
+  .top-section,
+  .left-content {
+    position: static !important;
+  }
+
+  /* Bootstrap grid override */
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Cards – universal fix */
+  .card,
+  .projects_cards .card,
+  .internship_cards .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 16px 0 !important;
+    height: auto !important;
+  }
+
+  /* Kill fixed heights */
+  .projects_cards,
+  .internship_cards,
+  .skill {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Text scaling */
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.85rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+
+  /* Buttons */
+  button,
+  .btn,
+  .inter-buttons {
+    width: 100% !important;
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  /* Contact form */
+  .contacts,
+  .skill#contact {
+    width: 100% !important;
+    padding: 8px;
+  }
+
+  .contacts input,
+  .contacts textarea,
+  .contacts button {
+    width: 100% !important;
+  }
+}
+@media (max-width: 320px) {
+  /* ===== ACADEMICS – HARD RESET ===== */
+
+  #academics .row {
+    display: block !important; /* kill bootstrap row flex */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #academics [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+  }
+
+  #academics .academic_cards {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Card styling */
+  #academics .card {
+    width: 92% !important;
+    max-width: 92% !important;
+    margin: 0 auto 12px auto !important;
+    padding: 6px !important;
+    height: auto !important;
+    font-size: 0.7rem;
+  }
+
+  /* Card header */
+  #academics .card-header {
+    font-size: 0.8rem !important;
+    padding: 4px !important;
+    text-align: center;
+  }
+
+  /* Title + text */
+  #academics .card-title {
+    font-size: 0.75rem !important;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  #academics .card-text {
+    font-size: 0.68rem !important;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  /* Section heading */
+  #academics h1 {
+    font-size: 1.05rem !important;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  #typingtext {
+    width: 90%; /* increase width */
+    font-size: 1rem; /* increase text size */
+    padding: 10px; /* add spacing */
+    min-height: 80px;
+    height: 500px !important; /* increase div height if needed */
+  }
+}
+
+/* ================= Extra Small Devices ≤ 320px ================= */
+@media (max-width: 320px) {
+  body,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 0.7rem !important;
+    margin-left: 2px !important;
+  }
+  p {
+    font-size: 0.7rem !important;
+  }
+  #home {
+    font-size: 2em !important;
+  }
+  .inner {
+    font-size: 2em !important;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .maincontent,
+  .content,
+  #home,
+  .section,
+  .galaxy {
+    margin-left: 0;
+    padding: 3px;
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  /* Galaxy section stacked */
+  .galaxy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .galaxy img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Intro / Info items */
+  .introitem,
+  .info-box {
+    width: 95%;
+    margin: 3px auto;
+    padding: 3px;
+    display: block;
+    font-size: 0.65rem;
+  }
+
+  /* Skills horizontal scroll */
+  .skill .grids {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 4px;
+  }
+  .skill .card1 {
+    flex: 0 0 auto;
+    min-width: 80px;
+    min-height: 70px;
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+  }
+
+  /* Tables responsive */
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.65rem;
+  }
+  table th,
+  table td {
+    padding: 4px;
+  }
+}
+@media (max-width: 320px) {
+  .galaxy-inner {
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+
+  .all_heading {
+    font-size: 0.75rem;
+  }
+
+  .decoration-bg1 {
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  /* === FORCE ACADEMICS VERTICAL === */
+
+  .academic_cards,
+  .academic_cards .row {
+    display: block !important; /* kill flex / grid / row */
+  }
+
+  .academic_cards > *,
+  .academic_cards .row > *,
+  .academic_cards [class*="col"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important; /* kill float layouts */
+  }
+
+  /* Cards one below the other */
+  .academic_cards .card {
+    width: 90% !important;
+    margin: 0 auto 12px auto !important;
+    padding: 6px !important;
+    height: auto !important;
+    font-size: 0.75rem;
+  }
+
+  /* Reduce text size */
+  .academic_cards h5,
+  .academic_cards .card-title {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .academic_cards p,
+  .academic_cards .card-text {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+}
+/* =========================== Certificates Section =========================== */
+@media (max-width: 320px) {
+  /* Base vertical layout for certificates */
+  .certificate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 5px;
+    height: auto; /* allow cards to expand */
+  }
+
+  .certificate .row {
+    display: flex;
+    flex-wrap: wrap; /* wrap cards to next line */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .certificate .row > div {
+    flex: 0 0 200px; /* each card fixed width max */
+    max-width: 200px;
+    padding: 5px;
+    text-align: center;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .certificate .row img.cert-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .certificate h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+/* =========================== Contact Form Section =========================== */
+
+/* Container adjustments */
+@media (max-width: 320px) {
+  .contacts,
+  .skill#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 10px auto;
+    padding: 5px;
+    gap: 10px;
+    height: auto; /* allow form to expand */
+    box-sizing: border-box;
+  }
+
+  /* Headings */
+  .contacts h1,
+  .skill#contact h1 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  /* Form adjustments */
+  .contacts form,
+  .skill#contact form {
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 300px;
+    gap: 5px;
+  }
+
+  .contacts form .form-group,
+  .skill#contact form .form-group {
+    width: 100%;
+  }
+
+  .contacts form .form-control,
+  .skill#contact form .form-control,
+  .contacts form textarea,
+  .skill#contact form textarea {
+    font-size: 0.75rem;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Buttons */
+  .contacts form button,
+  .skill#contact form button {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .internship_cards .card button,
+  .projects_cards .card button,
+  .close-small-btn {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+    width: auto;
+  }
+}
+@media (max-width: 320px) {
+  /* Skills section spacing */
+  #skillsSection {
+    padding: 5px;
+  }
+
+  /* Stack skills vertically */
+  #skillsSection .grids {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Skill card */
+  #skillsSection .card1 {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 6px !important;
+    font-size: 0.75rem;
+  }
+
+  /* Skill title */
+  #skillsSection .card1 h6 {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+
+  /* Progress bar container */
+  #skillsSection .progress {
+    height: 6px;
+  }
+
+  /* Progress bar text */
+  #skillsSection .progress-bar {
+    font-size: 0.55rem;
+    line-height: 6px;
+  }
+
+  /* Skills heading */
+  #skills {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  /* Icon size */
+  #skillsSection i {
+    font-size: 35px !important;
+  }
+}
+/* tablet*/
+/* ================= TABLET FIX (max-width: 768px) ================= */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Main layout */
+  .maincontent,
+  .content,
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px;
+    margin: 90px auto 20px auto;
+  }
+
+  .top-section,
+  .left-content {
+    position: static !important;
+  }
+
+  /* Bootstrap grid */
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Cards */
+  .card,
+  .projects_cards .card,
+  .internship_cards .card {
+    width: 100% !important;
+    margin-bottom: 18px !important;
+    height: auto !important;
+  }
+
+  .projects_cards,
+  .internship_cards,
+  .skill {
+    height: auto !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons */
+  button,
+  .btn,
+  .inter-buttons {
+    width: 100% !important;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* ================= ACADEMICS – VERTICAL ================= */
+  #academics .row,
+  .academic_cards {
+    display: block !important;
+  }
+
+  #academics [class*="col"] {
+    width: 100% !important;
+  }
+
+  .academic_cards .card {
+    width: 85% !important;
+    margin: 0 auto 16px auto !important;
+    font-size: 0.85rem;
+  }
+
+  #academics h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  /* ================= TYPING TEXT ================= */
+  #typingtext {
+    width: 90%;
+    font-size: 1.2rem;
+    padding: 14px;
+    min-height: 120px;
+  }
+
+  /* ================= GALAXY ================= */
+  .galaxy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .galaxy-inner {
+    width: 90% !important;
+  }
+
+  .decoration-bg1 {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* ================= SKILLS ================= */
+  #skillsSection .grids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #skillsSection .card1 {
+    width: 85% !important;
+    font-size: 0.9rem;
+  }
+
+  /* ================= CERTIFICATES ================= */
+  .certificate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+
+  .certificate .row {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .certificate .row > div {
+    max-width: 240px;
+  }
+
+  /* ================= CONTACT ================= */
+  .contacts,
+  .skill#contact {
+    width: 85%;
+    margin: auto;
+  }
+
+  .contacts form,
+  .skill#contact form {
+    width: 100%;
+  }
+}
+
+/* Tablet / Mobile ≤ 768px */
+@media (max-width: 768px) {
+  .sidebar {
+    display: block; /* sidebar visible on desktop */
+    width: 220px;
+    background: #222;
+    color: #fff;
+    height: 100vh;
+    position: relative;
+    float: left;
+    padding: 10px;
+  }
+  .menu-btn {
+    display: block; /* show menu button */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  /* Sidebar hidden by default */
+  .sidebar {
+    position: fixed;
+    left: -250px; /* hide sidebar offscreen */
+    top: 0;
+    height: 100vh;
+    z-index: 1500;
+  }
+
+  /* When button is checked → show sidebar */
+  /* We need a checkbox hack for CSS only toggle */
+}
+
+/* === CSS Checkbox Hack === */
+#menuToggle {
+  display: none;
+}
+
+#menuToggle:checked ~ .sidebar {
+  left: 0; /* show sidebar */
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

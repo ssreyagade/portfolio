@@ -1,0 +1,1560 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* Normal navbar links */
+.nav-item {
+  background: (2, 2, 70, 0.692);
+  color: rgb(248, 244, 244);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-item.active {
+  background: rgb(40, 147, 161);
+  color: rgb(29, 6, 6);
+}
+.certificate,
+.contacts {
+  position: relative;
+  z-index: 1;
+}
+
+.grid-section {
+  min-height: 30vh;
+  background-image:
+    linear-gradient(#e5e5e5 1px, transparent 1px),
+    linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+  background-size: 40px 40px;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.grid-section h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.close-small-btn {
+  background-color: #197fdf;
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+  height: 100%;
+  position: fixed;
+  width: 320px;
+  background-color: rgba(2, 2, 70, 0.692);
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+.sidebar a {
+  padding: 25px 25px;
+  display: block;
+  border-bottom: 1px solid rgba(199, 230, 243, 0.973);
+  font-size: large;
+  color: azure;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  background: rgb(7, 30, 59);
+  font-weight: bold;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  background: rgb(8, 2, 97);
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative; /* needed for centering */
+  text-decoration: none;
+  /*color: #000;*/
+  transition: 0.3s;
+}
+
+.icon-circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%); /* shifted more to the left */
+  font-size: 22px;
+  line-height: 1;
+}
+
+.icon-circle:hover {
+  background: #0d6efd;
+  /*color: white;*/
+  transform: scale(1.1);
+}
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.card-shadow {
+  border: 2px solid rgb(8, 8, 48);
+}
+
+h1 {
+  margin-top: 0;
+  padding-top: 10px;
+  width: 100%;
+}
+.content {
+  margin-left: 350px;
+  padding: 0;
+}
+.custom-margin {
+  margin-top: 50px; /* or any value */
+}
+.text-justify {
+  text-align: justify;
+}
+.galaxy {
+  width: 80%;
+  height: 500px;
+  margin: 50px auto;
+  padding-top: 50px;
+  margin-top: 50px;
+  /*background: #1e013036;*/
+  background: linear-gradient(-45deg, #b6d82086, #ea6bee4f);
+  /*background: linear-gradient(#020246, #D474BF, #00CED1);*/
+  background-size: 100% 100%;
+  animation: gradientShift 15s ease infinite; /* give enough space */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #231557;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 420px;
+}
+.no-text-shadow {
+  text-shadow: none !important;
+}
+
+.info-box {
+  width: 60%;
+  text-shadow: none;
+  min-height: 350px;
+  background: rgba(0, 0, 0, 0.137);
+  color: #0d6efd;
+  border-radius: 10px;
+  padding: 20px 25px;
+  border: 1px solid #4fc3f7;
+  color: #e0f7fa;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.marquee-box {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative;
+}
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative;
+}
+.section {
+  position: relative;
+  width: 100%;
+  background-image:
+    linear-gradient(#eee0e0 1px, transparent 1px),
+    linear-gradient(90deg, #d7e3eb 1px, transparent 1px);
+  background-size: 40px 40px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-shadow: 2px 2px 6px black;
+}
+
+.section::before {
+  content: "";
+  position: absolute; /* FIXED → WRONG, ABSOLUTE → CORRECT */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* background: rgba(45, 61, 70, 0.733); /* 🔥 your transparent color here */
+
+  z-index: 0; /* overlay */
+}
+
+/* ensure your content is above the overlay */
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+.academic_cards,
+.academic_cards .card {
+  position: relative;
+  z-index: 5;
+}
+
+/* ----- single element fade + slide (intro block) ----- */
+.fade-slide {
+  margin-top: 150px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide_single 700ms ease-out forwards;
+  /*background: rgba(0, 0, 0, 0.4);*/
+  border-radius: 10px;
+  padding: 20px 25px;
+  border: 1px solid #231557;
+  color: rgb(11, 1, 37);
+  line-height: 1.5;
+}
+
+/* keyframes for single element */
+@keyframes fadeSlide_single {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.profile {
+  margin-top: 50px;
+}
+
+.academic_cards,
+.academic_cards .card {
+  position: relative;
+  z-index: 5;
+}
+
+.fade-slides {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeSlides 1s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fadeSlides {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.academic_cards > .fade-slides:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.academic_cards > .fade-slides:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.academic_cards > .fade-slides:nth-child(1) {
+  animation-delay: 0.8s;
+}
+.card-shadow {
+  box-shadow: 0 0 20px rgba(5, 20, 36, 0.5);
+}
+.internship_cards {
+  height: 650px;
+  border-color: #190e3f;
+  overflow: visible !important;
+}
+.projects_cards {
+  height: 2800px;
+  overflow: visible !important;
+}
+.grids {
+  justify-content: space-around;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 100px 100px 100px; /* 2 rows */
+  gap: 10px;
+}
+.card1 {
+  height: 90px;
+  width: 250px;
+}
+.skill {
+  height: 800px;
+}
+.certificate {
+  height: 1500px;
+}
+.cert-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.div-border {
+  border: 2px solid rgb(13, 75, 168);
+}
+.card-body a {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+.card {
+  position: relative;
+}
+.top-section {
+  height: 50vh;
+  background: radial-gradient(circle at 50% 0%, #bab7f1 0%, #ffffff 70%);
+  position: relative;
+  top: -60px;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 70px;
+}
+.uniform-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.allcards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allcards > .col-md-6 {
+  display: flex;
+}
+.decoration-bg2 {
+  /* Gradient background */
+  background: linear-gradient(
+    -45deg,
+    #02024652,
+    #00ffffce,
+    #ffd9002f,
+    #ff7f5046
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.decoration-bg1 {
+  /*background: linear-gradient(-45deg, #81a756, #e2ee724f);*/
+  background: linear-gradient(-45deg, #ee66d770, #c9dd144f);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite; /* give enough space */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.decoration-bg1-inner {
+  background: linear-gradient(-45deg, #81a756, #e2ee724f);
+  /*background: linear-gradient(#020246, #D474BF, #00CED1);*/
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite; /* give enough space */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.custom-border {
+  border: #231557 solid 2px;
+}
+.all_heading {
+  color: #231557;
+}
+profile .introitem {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ================= Base Styles (Desktop Default) ================= */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  width: 90%;
+  margin: auto;
+}
+
+.sidebar {
+  background-color: #190e3f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 250px;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.maincontent,
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.card {
+  margin: 12px;
+  border-radius: 10px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= Extra Small Devices ≤ 320px ================= */
+@media (max-width: 320px) {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-size: 0.7rem !important;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .maincontent,
+  .content,
+  #home,
+  .section,
+  .galaxy {
+    margin-left: 0;
+    padding: 3px;
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  /* Galaxy section stacked */
+  .galaxy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .galaxy img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Intro / Info items */
+  .introitem,
+  .info-box {
+    width: 95%;
+    margin: 3px auto;
+    padding: 3px;
+    display: block;
+    font-size: 0.65rem;
+  }
+
+  /* Skills horizontal scroll */
+  .skill .grids {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 4px;
+  }
+  .skill .card1 {
+    flex: 0 0 auto;
+    min-width: 80px;
+    min-height: 70px;
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+  }
+
+  /* Tables responsive */
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.65rem;
+  }
+  table th,
+  table td {
+    padding: 4px;
+  }
+
+  /* Certificates */
+  .certificate .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  .certificate .row > div {
+    flex: 0 0 85%;
+    max-width: 250px;
+    font-size: 0.65rem;
+    padding: 3px;
+  }
+  .certificate .cert-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Contact forms */
+  .contacts form,
+  .contacts form .form-group,
+  .contacts form .form-control,
+  .contacts form textarea,
+  .contacts form button {
+    width: 100% !important;
+    font-size: 0.65rem;
+    padding: 3px;
+  }
+
+  /* Academics cards */
+  .academic_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .academic_cards .card {
+    width: 90%;
+    max-width: 220px;
+    font-size: 0.65rem;
+    margin: 3px auto;
+    padding: 3px;
+  }
+
+  /* Internship carousel */
+  #cardSlider .carousel-item .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  #cardSlider .carousel-item .col-md-6 {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  #cardSlider .card {
+    width: 100%;
+    font-size: 0.65rem;
+    padding: 3px;
+  }
+
+  /* Project cards */
+  .projects_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+  .projects_cards .card {
+    width: 90%;
+    font-size: 0.65rem;
+    padding: 3px;
+  }
+}
+
+/* ================= Small Devices 321px – 480px ================= */
+@media (min-width: 321px) and (max-width: 480px) {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-size: 0.8rem;
+  }
+  .sidebar {
+    width: 140px;
+  }
+  .maincontent,
+  .content {
+    margin-left: 140px;
+    padding: 5px;
+  }
+
+  .galaxy img {
+    max-width: 85%;
+  }
+
+  .academic_cards .card,
+  #cardSlider .card,
+  .projects_cards .card {
+    width: 85%;
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+}
+
+/* ================= Medium Devices 481px – 768px ================= */
+@media (min-width: 481px) and (max-width: 768px) {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-size: 0.9rem;
+  }
+  .sidebar {
+    width: 180px;
+  }
+  .maincontent,
+  .content {
+    margin-left: 180px;
+    padding: 10px;
+  }
+
+  .galaxy {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .galaxy img {
+    max-width: 70%;
+  }
+
+  .academic_cards .card,
+  #cardSlider .card,
+  .projects_cards .card {
+    width: 75%;
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+}
+
+/* ================= Large Devices 769px – 1200px ================= */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .sidebar {
+    width: 220px;
+  }
+  .maincontent,
+  .content {
+    margin-left: 220px;
+    padding: 15px;
+  }
+
+  .galaxy {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .galaxy img {
+    max-width: 50%;
+  }
+
+  .academic_cards .card,
+  #cardSlider .card,
+  .projects_cards .card {
+    width: 70%;
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}
+
+/* ================= Extra Large Devices > 1200px ================= */
+@media (min-width: 1201px) {
+  .sidebar {
+    width: 250px;
+  }
+  .maincontent,
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+
+  .galaxy {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .galaxy img {
+    max-width: 40%;
+  }
+
+  .academic_cards .card,
+  #cardSlider .card,
+  .projects_cards .card {
+    width: 60%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+/* ================= Projects Section Fully Responsive ================= */
+
+/* Extra Small Devices ≤ 320px */
+@media (max-width: 320px) {
+  .projects_cards {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    gap: 5px;
+    padding: 2px;
+  }
+
+  .projects_cards .card {
+    width: 95%;
+    max-width: 250px;
+    font-size: 0.65rem;
+    padding: 3px;
+    margin: 3px 0;
+    text-align: center;
+  }
+
+  .projects_cards .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .projects_cards .card h5 {
+    font-size: 0.7rem;
+    margin: 2px 0;
+  }
+
+  .projects_cards .card p {
+    font-size: 0.6rem;
+    margin: 2px 0;
+  }
+
+  /* Buttons in project cards */
+  .projects_cards .card button {
+    font-size: 0.6rem;
+    padding: 3px 5px;
+    width: 80%;
+    margin: 3px auto;
+    display: block;
+    border-radius: 4px;
+  }
+}
+
+/* Small Devices 321px – 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+  .projects_cards {
+    gap: 6px;
+    padding: 5px;
+  }
+
+  .projects_cards .card {
+    width: 90%;
+    max-width: 280px;
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+
+  .projects_cards .card h5 {
+    font-size: 0.8rem;
+  }
+
+  .projects_cards .card p {
+    font-size: 0.7rem;
+  }
+
+  .projects_cards .card button {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+    width: 85%;
+  }
+}
+
+/* Medium Devices 481px – 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .projects_cards {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .projects_cards .card {
+    width: 80%;
+    max-width: 300px;
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .projects_cards .card h5 {
+    font-size: 0.9rem;
+  }
+
+  .projects_cards .card p {
+    font-size: 0.8rem;
+  }
+
+  .projects_cards .card button {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    width: 90%;
+  }
+}
+
+/* Large Devices 769px – 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .projects_cards .card {
+    width: 70%;
+    max-width: 400px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .projects_cards .card button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    width: auto;
+  }
+}
+
+/* Extra Large Devices > 1200px */
+@media (min-width: 1201px) {
+  .projects_cards .card {
+    width: 60%;
+    max-width: 500px;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .projects_cards .card button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+/* internship*/
+/* ================= Internship Section Responsive (Normal Vertical Cards) ================= */
+
+/* Base: Stack all internship cards vertically */
+.internship_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center cards horizontally */
+  gap: 10px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* Each card */
+.internship_cards .card {
+  width: 95%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+/* Card heading */
+.internship_cards .card h5 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Card subheading / role */
+.internship_cards .card h6 {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+/* Card paragraph */
+.internship_cards .card p {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+/* Icons inside card */
+.internship_cards .card i {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Buttons inside card */
+.internship_cards .card button {
+  font-size: 0.8rem;
+  padding: 5px 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+/* Extra Small Devices ≤ 320px */
+@media (max-width: 320px) {
+  .internship_cards {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .internship_cards .card {
+    width: 95%;
+    font-size: 0.65rem;
+    padding: 5px;
+  }
+
+  .internship_cards .card h5 {
+    font-size: 0.7rem;
+  }
+
+  .internship_cards .card h6 {
+    font-size: 0.65rem;
+  }
+
+  .internship_cards .card p {
+    font-size: 0.6rem;
+  }
+
+  .internship_cards .card i {
+    font-size: 1rem;
+  }
+
+  .internship_cards .card button {
+    font-size: 0.65rem;
+    padding: 3px 5px;
+  }
+}
+
+/* Small Devices 321px – 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+  .internship_cards {
+    width: 90%;
+    height: 700px;
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  .internship_cards .card h5 {
+    font-size: 0.8rem;
+  }
+
+  .internship_cards .card h6 {
+    font-size: 0.75rem;
+  }
+
+  .internship_cards .card p {
+    font-size: 0.7rem;
+  }
+
+  .internship_cards .card button {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+}
+
+/* Medium Devices 481px – 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .internship_cards .card {
+    width: 80%;
+    max-width: 350px;
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .internship_cards .card h5 {
+    font-size: 0.9rem;
+  }
+
+  .internship_cards .card h6 {
+    font-size: 0.85rem;
+  }
+
+  .internship_cards .card p {
+    font-size: 0.8rem;
+  }
+
+  .internship_cards .card button {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}
+
+/* Large Devices 769px – 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .internship_cards .card {
+    width: 70%;
+    max-width: 400px;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .internship_cards .card h5 {
+    font-size: 1rem;
+  }
+
+  .internship_cards .card button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Extra Large Devices > 1200px */
+@media (min-width: 1201px) {
+  .internship_cards .card {
+    width: 60%;
+    max-width: 450px;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .internship_cards .card h5 {
+    font-size: 1.1rem;
+  }
+
+  .internship_cards .card button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+/* ================= GitHub Button Responsive ================= */
+@media (min-width: 321px) and (max-width: 480px) {
+  .internship_cards {
+    width: 95%; /* slightly wider */
+    height: auto; /* let it expand based on content */
+    font-size: 0.85rem; /* bigger text */
+    padding: 10px; /* more padding inside cards */
+  }
+
+  /* Each card inside internship section */
+  .internship_cards .card {
+    width: 95%;
+    max-width: 350px; /* bigger card width */
+    font-size: 0.85rem; /* bigger text inside card */
+    padding: 8px; /* more padding inside card */
+    margin-bottom: 10px;
+  }
+
+  .internship_cards .card h5 {
+    font-size: 0.95rem; /* heading bigger */
+  }
+
+  .internship_cards .card h6 {
+    font-size: 0.85rem; /* subheading bigger */
+  }
+
+  .internship_cards .card p {
+    font-size: 0.8rem; /* paragraph bigger */
+  }
+
+  /* Buttons inside cards */
+  .internship_cards .card button {
+    font-size: 0.8rem; /* bigger button text */
+    padding: 6px 10px; /* bigger button */
+  }
+}
+
+/* Medium Devices 481px – 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .close-small-btn {
+    font-size: 0.85rem !important;
+    padding: 5px 8px !important;
+  }
+}
+
+/* Large Devices 769px – 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .close-small-btn {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Extra Large Devices > 1200px */
+@media (min-width: 1201px) {
+  .close-small-btn {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  .internship_cards {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 95% !important;
+    height: auto !important; /* let cards expand */
+    font-size: 0.85rem !important;
+    padding: 10px !important;
+    gap: 10px !important; /* space between cards */
+    margin: 0 auto !important;
+  }
+
+  /* Each card */
+  .internship_cards .card {
+    width: 95% !important;
+    max-width: 350px !important;
+    font-size: 0.85rem !important;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+
+  .internship_cards .card h5 {
+    font-size: 0.95rem !important;
+  }
+
+  .internship_cards .card h6 {
+    font-size: 0.85rem !important;
+  }
+
+  .internship_cards .card p {
+    font-size: 0.8rem !important;
+  }
+
+  /* Buttons inside cards */
+  .internship_cards .card button {
+    font-size: 0.85rem !important;
+    padding: 6px 10px !important;
+    width: auto !important;
+  }
+}
+/* =========================== GENERAL FLEXIBLE CARDS =========================== */
+
+/* Base: All card containers stack vertically and centered */
+.internship_cards,
+.projects_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center cards horizontally */
+  gap: 10px; /* space between cards */
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+  height: auto; /* let content define height */
+}
+
+/* Each card */
+.internship_cards .card,
+.projects_cards .card {
+  width: 100%;
+  max-width: 350px; /* max width */
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Card elements */
+.internship_cards .card h5,
+.projects_cards .card h5 {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.internship_cards .card h6,
+.projects_cards .card h6 {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.internship_cards .card p,
+.projects_cards .card p {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+/* Card buttons */
+.internship_cards .card button,
+.projects_cards .card button,
+.close-small-btn {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* =========================== RESPONSIVE RANGES =========================== */
+
+/* Extra Small Devices ≤ 320px */
+@media (max-width: 320px) {
+  .internship_cards,
+  .projects_cards {
+    width: 100% !important;
+    padding: 2px !important;
+    gap: 5px !important;
+  }
+
+  .internship_cards .card,
+  .projects_cards .card {
+    width: 95% !important;
+    max-width: 300px !important;
+    padding: 5px !important;
+    font-size: 0.65rem !important;
+  }
+
+  .internship_cards .card h5,
+  .projects_cards .card h5 {
+    font-size: 0.7rem !important;
+  }
+
+  .internship_cards .card h6,
+  .projects_cards .card h6 {
+    font-size: 0.65rem !important;
+  }
+
+  .internship_cards .card p,
+  .projects_cards .card p {
+    font-size: 0.6rem !important;
+  }
+
+  .internship_cards .card button,
+  .projects_cards .card button,
+  .close-small-btn {
+    font-size: 0.65rem !important;
+    padding: 3px 5px !important;
+    width: 80% !important;
+  }
+}
+
+/* Small Devices 321px – 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+  .internship_cards,
+  .projects_cards {
+    width: 95%;
+    gap: 8px;
+    padding: 5px;
+  }
+
+  .internship_cards .card,
+  .projects_cards .card {
+    width: 95%;
+    max-width: 350px;
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+
+  .internship_cards .card h5,
+  .projects_cards .card h5 {
+    font-size: 0.85rem;
+  }
+
+  .internship_cards .card h6,
+  .projects_cards .card h6 {
+    font-size: 0.75rem;
+  }
+
+  .internship_cards .card p,
+  .projects_cards .card p {
+    font-size: 0.7rem;
+  }
+
+  .internship_cards .card button,
+  .projects_cards .card button,
+  .close-small-btn {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+    width: auto;
+  }
+}
+
+/* Medium Devices 481px – 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .internship_cards,
+  .projects_cards {
+    width: 90%;
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .internship_cards .card,
+  .projects_cards .card {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .internship_cards .card button,
+  .projects_cards .card button,
+  .close-small-btn {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}
+
+/* Large Devices 769px – 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .internship_cards .card,
+  .projects_cards .card {
+    width: 70%;
+    max-width: 450px;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .internship_cards .card button,
+  .projects_cards .card button,
+  .close-small-btn {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Extra Large Devices > 1200px */
+@media (min-width: 1201px) {
+  .internship_cards .card,
+  .projects_cards .card {
+    width: 60%;
+    max-width: 500px;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .internship_cards .card button,
+  .projects_cards .card button,
+  .close-small-btn {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+/* =========================== Certificates Section =========================== */
+
+/* Base vertical layout for certificates */
+.certificate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+  height: auto; /* allow cards to expand */
+}
+
+.certificate .row {
+  display: flex;
+  flex-wrap: wrap; /* wrap cards to next line */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.certificate .row > div {
+  flex: 0 0 200px; /* each card fixed width max */
+  max-width: 200px;
+  padding: 5px;
+  text-align: center;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.certificate .row img.cert-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.certificate h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* =========================== Contact Form Section =========================== */
+
+/* Container adjustments */
+.contacts,
+.skill#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin: 10px auto;
+  padding: 5px;
+  gap: 10px;
+  height: auto; /* allow form to expand */
+  box-sizing: border-box;
+}
+
+/* Headings */
+.contacts h1,
+.skill#contact h1 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Form adjustments */
+.contacts form,
+.skill#contact form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 5px;
+}
+
+.contacts form .form-group,
+.skill#contact form .form-group {
+  width: 100%;
+}
+
+.contacts form .form-control,
+.skill#contact form .form-control,
+.contacts form textarea,
+.skill#contact form textarea {
+  font-size: 0.75rem;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.contacts form button,
+.skill#contact form button {
+  font-size: 0.75rem;
+  padding: 5px 8px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* =========================== Responsive Ranges =========================== */
+
+/* Extra Small Devices ≤ 320px */
+@media (max-width: 320px) {
+  .certificate .row > div,
+  .internship_cards .card,
+  .projects_cards .card,
+  .contacts form,
+  .skill#contact form {
+    width: 95% !important;
+  }
+
+  .certificate .row > div img.cert-img {
+    height: 80px !important;
+  }
+
+  .contacts form .form-control,
+  .skill#contact form .form-control,
+  .contacts form textarea,
+  .skill#contact form textarea {
+    font-size: 0.65rem !important;
+    padding: 3px !important;
+  }
+
+  .contacts form button,
+  .skill#contact form button {
+    font-size: 0.65rem !important;
+    padding: 3px 5px !important;
+  }
+}
+
+/* Small Devices 321px – 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+  .certificate .row > div {
+    flex: 0 0 220px;
+    max-width: 220px;
+  }
+
+  .certificate .row > div img.cert-img {
+    height: 100px;
+  }
+
+  .contacts form .form-control,
+  .skill#contact form .form-control,
+  .contacts form textarea,
+  .skill#contact form textarea {
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+
+  .contacts form button,
+  .skill#contact form button {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+}
+
+/* Medium Devices 481px – 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .certificate .row > div {
+    flex: 0 0 240px;
+    max-width: 240px;
+  }
+
+  .contacts form,
+  .skill#contact form {
+    max-width: 350px;
+  }
+
+  .contacts form button,
+  .skill#contact form button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Large Devices 769px – 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .certificate .row > div {
+    flex: 0 0 250px;
+    max-width: 250px;
+  }
+
+  .contacts form,
+  .skill#contact form {
+    max-width: 400px;
+  }
+}
+
+/* Extra Large Devices > 1200px */
+@media (min-width: 1201px) {
+  .certificate .row > div {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+
+  .contacts form,
+  .skill#contact form {
+    max-width: 450px;
+  }
+}
